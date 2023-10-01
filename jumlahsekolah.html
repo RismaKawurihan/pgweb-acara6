@@ -42,6 +42,8 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="jumlahsekolah.html">Jumlah Sekolah</a></li>
+                            <li><a class="dropdown-item" href="rumahsakit.html">Jumlah Rumah Sakit</a></li>
+                            <li><a class="dropdown-item" href="panenbuah.html">Jumlah Produksi Buah</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -57,7 +59,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h5>Jumlah Penduduk</h5>
+                <h5>Jumlah Sekolah</h5>
             </div>
             <div class="card-body">
                 <div id="chart"></div>
@@ -98,12 +100,12 @@
 
     <script>
           var options = {
-          series: [139, 132, 166],
+          series: [139, 132, 166, 59],
           chart: {
           type: 'donut',
           width:500,
         },
-        labels: ['SD', 'SMP', 'SMA'],
+        labels: ['SD', 'SMP', 'SMA', 'SMK'],
         responsive: [{
           breakpoint: 480,
           options: {

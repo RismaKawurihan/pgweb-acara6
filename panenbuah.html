@@ -99,71 +99,47 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        var options = {
-            series: [{
-                name: 'Jumlah Laki Laki',
-                data: [ 42000, 37530, 31968, 43572, 31811, 27621, 31125, 26008, 34130, 21954, 21393, 21159 ]
-            }, 
-            {
-                name: 'Jumlah Perempuan',
-                data: [ 43869, 38389, 32545, 46443, 33218, 29077, 30753, 27375, 34475, 26323, 22901, 20643 ]
-            }],
-            chart: {
-                type: 'bar',
-                height: 350
+          var options = {
+            series: [2011, 4357, 6507, 32785, 45571, 54579, 142184],
+          chart: {
+          width: 380,
+          type: 'polarArea'
+        },
+        labels: ['Belimbing','Jeruk Keprok','Duku','Alpukat','Pepaya','Jambu Biji','Durian'],
+        fill: {
+          opacity: 1
+        },
+        stroke: {
+          width: 1,
+          colors: undefined
+        },
+        yaxis: {
+          show: false
+        },
+        legend: {
+          position: 'bottom'
+        },
+        plotOptions: {
+          polarArea: {
+            rings: {
+              strokeWidth: 0
             },
-            plotOptions: {
-                bar: {
-                    horizontal: false,
-                    columnWidth: '55%',
-                    endingShape: 'rounded',
-                    dataLabels: {
-                        position: 'top',
-                    }
-                },
+            spokes: {
+              strokeWidth: 0
             },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                show: true,
-                width: 2,
-                colors: ['transparent']
-            },
-            xaxis: {
-                categories: [ 'Praya Barat', 'Praya Barat Daya', 'Pujut', 'Praya Timur', 'Janapria', 'Kopang', 'Praya', 'Praya Tengah', 'Jonggat', 'Pringgarata', 'Batukliang', 'Batukliang Utara'
-                ],
-                title:{
-                    text: 'Kecamatan'
-                }
-            },
-            yaxis: {
-                title: {
-                    text: 'Jiwa'
-                }
-            },
-            fill: {
-                opacity: 1
-            },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return  + val + " jiwa"
-                    }
-                }
-            },
-            dataLabels: {
-          enabled: true,
-          formatter: function (val) {
-            return val ;
-          },
-          offsetY: -20,
-          style: {
-            fontSize: '12px',
-            colors: ["#304758"]
           }
         },
+        theme: {
+          monochrome: {
+            enabled: true,
+            shadeTo: 'light',
+            shadeIntensity: 0.6
+          }
+        }
         };
+
+        // var chart = new ApexCharts(document.querySelector("#chart"), options);
+        // chart.render();
         
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
